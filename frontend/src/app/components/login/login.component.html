@@ -1,0 +1,55 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full space-y-8 p-10 bg-white rounded-xl shadow-lg">
+    <div>
+      <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+        {{ 'LOGIN.TITLE' | translate }}
+      </h2>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="mt-8 space-y-6">
+      <div class="rounded-md shadow-sm -space-y-px">
+        <div>
+          <label for="email" class="sr-only">{{ 'LOGIN.EMAIL_PLACEHOLDER' | translate }}</label>
+          <input
+            id="email"
+            type="email"
+            formControlName="email"
+            autocomplete="email"
+            required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            placeholder="{{ 'LOGIN.EMAIL_PLACEHOLDER' | translate }}"
+          />
+          <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="text-red-600 text-sm mt-1">
+            {{ 'LOGIN.EMAIL_ERROR' | translate }}
+          </div>
+        </div>
+        <div class="mt-4">
+          <label for="password" class="sr-only">{{ 'LOGIN.PASSWORD_PLACEHOLDER' | translate }}</label>
+          <input
+            id="password"
+            type="password"
+            formControlName="password"
+            autocomplete="current-password"
+            required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            placeholder="{{ 'LOGIN.PASSWORD_PLACEHOLDER' | translate }}"
+          />
+          <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-red-600 text-sm mt-1">
+            {{ 'LOGIN.PASSWORD_ERROR' | translate }}
+          </div>
+        </div>
+      </div>
+      <div *ngIf="errorMessage" class="text-red-600 text-center text-sm mt-2">
+        {{ 'LOGIN.LOGIN_FAILED' | translate }}
+      </div>
+      <div>
+        <button
+          type="submit"
+          [disabled]="loginForm.invalid"
+          class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        >
+          {{ 'LOGIN.SUBMIT_BUTTON' | translate }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
