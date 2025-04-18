@@ -1,0 +1,11 @@
+{
+  "LOGIN": {
+    "TITLE": "Sign in to your account",
+    "EMAIL_PLACEHOLDER": "Email address",
+    "PASSWORD_PLACEHOLDER": "Password",
+    "EMAIL_ERROR": "Please enter a valid email.",
+    "PASSWORD_ERROR": "Password is required.",
+    "SUBMIT_BUTTON": "Sign In",
+    "LOGIN_FAILED": "Login failed. Please try again."
+  }
+}
