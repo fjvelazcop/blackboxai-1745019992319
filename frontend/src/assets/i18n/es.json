@@ -1,0 +1,11 @@
+{
+  "LOGIN": {
+    "TITLE": "Iniciar sesión en su cuenta",
+    "EMAIL_PLACEHOLDER": "Correo electrónico",
+    "PASSWORD_PLACEHOLDER": "Contraseña",
+    "EMAIL_ERROR": "Por favor, introduzca un correo electrónico válido.",
+    "PASSWORD_ERROR": "La contraseña es obligatoria.",
+    "SUBMIT_BUTTON": "Iniciar sesión",
+    "LOGIN_FAILED": "Error de inicio de sesión. Por favor, inténtelo de nuevo."
+  }
+}
