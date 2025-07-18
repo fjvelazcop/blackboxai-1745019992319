@@ -115,5 +115,7 @@
       }
     }
   },
-  "defaultProject": "medical-records-frontend"
+  "cli": {
+    "analytics": "a13f65b1-058f-4356-b290-02170bc4bb07"
+  }
 }
