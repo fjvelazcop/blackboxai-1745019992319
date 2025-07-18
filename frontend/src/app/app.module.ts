@@ -10,6 +10,13 @@ import { DoctorFormComponent } from './components/doctor-form/doctor-form.compon
 import { MedicalRecordListComponent } from './components/medical-record-list/medical-record-list.component';
 import { MedicalRecordFormComponent } from './components/medical-record-form/medical-record-form.component';
 import { AuthInterceptor } from './services/auth.interceptor';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { UserFormComponent } from './components/user-form/user-form.component';
+import { PatientProfileComponent } from './components/patient-profile/patient-profile.component';
+import { PatientAppointmentsComponent } from './components/patient-appointments/patient-appointments.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { AppointmentListComponent } from './components/appointment-list/appointment-list.component';
+import { AppointmentRequestComponent } from './components/appointment-request/appointment-request.component';
 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -25,7 +32,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     DoctorListComponent,
     DoctorFormComponent,
     MedicalRecordListComponent,
-    MedicalRecordFormComponent
+    MedicalRecordFormComponent,
+    UserListComponent,
+    UserFormComponent,
+    PatientProfileComponent,
+    PatientAppointmentsComponent,
+    CalendarComponent,
+    AppointmentListComponent,
+    AppointmentRequestComponent
   ],
   imports: [
     BrowserModule,
