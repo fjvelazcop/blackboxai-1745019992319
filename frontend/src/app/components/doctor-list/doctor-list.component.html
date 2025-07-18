@@ -1,0 +1,27 @@
+<div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-2xl font-semibold text-gray-700">Doctors</h2>
+    <button (click)="onCreate()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Add Doctor</button>
+  </div>
+  <table class="min-w-full table-auto border-collapse border border-gray-200">
+    <thead>
+      <tr class="bg-gray-100">
+        <th class="border border-gray-300 px-4 py-2 text-left">Name</th>
+        <th class="border border-gray-300 px-4 py-2 text-left">Specialty</th>
+        <th class="border border-gray-300 px-4 py-2 text-left">Patients</th>
+        <th class="border border-gray-300 px-4 py-2 text-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let doctor of doctors" class="hover:bg-gray-50">
+        <td class="border border-gray-300 px-4 py-2">{{ doctor.name }}</td>
+        <td class="border border-gray-300 px-4 py-2">{{ doctor.specialty }}</td>
+        <td class="border border-gray-300 px-4 py-2 text-center">{{ doctor.patientsCount }}</td>
+        <td class="border border-gray-300 px-4 py-2 text-center space-x-2">
+          <button (click)="onEdit(doctor.id)" class="text-indigo-600 hover:underline">Edit</button>
+          <button (click)="onDelete(doctor.id)" class="text-red-600 hover:underline">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
