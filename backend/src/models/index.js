@@ -3,9 +3,10 @@ const UserModel = require('./user');
 const DoctorModel = require('./doctor');
 const MedicalRecordModel = require('./medicalRecord');
 
-const sequelize = new Sequelize('postgresql://heroku:z5eW2OXl44PzSnDVK5UR3Ldm9U@dpg-d2005dali9vc73fu3p1g-a.virginia-postgres.render.com/medical_records_db_mcwy', {
-  dialect: 'postgres',
-  protocol: 'postgres',
+const sequelize = new Sequelize('medicalrecordsdb', 'heroku', 'z5eW2OXl44PzSnDVK5UR5muHPR3Ldm9U', {
+  host: 'localhost',
+  port: 3306,
+  dialect: 'mysql',
   logging: false,
   dialectOptions: {
     ssl: {
@@ -14,7 +15,6 @@ const sequelize = new Sequelize('postgresql://heroku:z5eW2OXl44PzSnDVK5UR3Ldm9U@
     }
   }
 });
-
 const User = UserModel(sequelize);
 const Doctor = DoctorModel(sequelize);
 const MedicalRecord = MedicalRecordModel(sequelize);
