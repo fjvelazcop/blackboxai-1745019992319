@@ -8,12 +8,12 @@ const sequelize = new Sequelize('medicalrecordsdb', 'heroku', 'z5eW2OXl44PzSnDVK
   port: 3306,
   dialect: 'mysql',
   logging: false,
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false
-    }
-  }
+  // dialectOptions: {
+  //   ssl: {
+  //     require: true,
+  //     rejectUnauthorized: false
+  //   }
+  // }
 });
 const User = UserModel(sequelize);
 const Doctor = DoctorModel(sequelize);
