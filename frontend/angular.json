@@ -56,18 +56,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "medical-records-frontend:build"
+            "buildTarget": "medical-records-frontend:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "medical-records-frontend:build:production"
+              "buildTarget": "medical-records-frontend:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "medical-records-frontend:build"
+            "buildTarget": "medical-records-frontend:build"
           }
         },
         "test": {

@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { AuthService } from './services/auth.service';
 import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [RouterModule],
   template: `
     <div class="min-h-screen bg-gray-100">
       <nav class="bg-white shadow p-4 flex justify-between items-center">
